@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.net.toUri
+import com.laudmedia.issuehunt.WebInterface
 import com.laudmedia.issuehunt.ui.theme.IssueHuntTheme
 
 @SuppressLint("SetJavaScriptEnabled")
@@ -79,7 +80,7 @@ fun VideoWebView() {
     AndroidView(
         factory = {
             WebView(it).apply {
-                //addJavascriptInterface(WebAppInterface(this.context), "Android")
+                addJavascriptInterface(WebInterface(this.context), "Android")
                 layoutParams = ViewGroup.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT
