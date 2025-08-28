@@ -1,0 +1,34 @@
+﻿@page "/"
+@using Fluxor
+@using IssueHunt.Client.Components.Track
+@using IssueHunt.Client.Components.Video
+@using IssueHunt.Client.Store
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@inject IState<ZoneState> ZoneState
+@inject IState<TrackState> TrackState
+@inject IDispatcher Dispatcher
+
+<PageTitle>IssueHunt</PageTitle>
+<div class="container">
+    <h1>Zone State @ZoneState.Value.LoadingState</h1>
+    <h1>Track State @TrackState.Value.LoadingState</h1>
+    <TrackManager></TrackManager>
+    <LiveFullscreenVideo></LiveFullscreenVideo>
+</div>
+@code
+{
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            Dispatcher.Dispatch(new LoadZoneAction(415, true));
+        }
+    }
+}

@@ -1,0 +1,939 @@
+{
+  "tracks": [
+    {
+      "id": 999,
+      "name": "BASE",
+      "priority": 0,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": null,
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/light_sign_1700x1062_NO_2308214-PvPUvO0aCkmRqRXp3yc69w_1255ef3f-1af2-4613-bdff-68093c9a6345.mp4",
+              "hash": "631324c5ad5c481604eb5f798c75efd5",
+              "size": 246108,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/light_sign_1700x1062_NO_2308213-3UzxGlWC90WjD0Gdql7xrA_c376ad30-c503-4af4-990a-ebe81544f582.mp4",
+              "hash": "d353368bbd323eaa00887e37e529d7f5",
+              "size": 161959,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/light_sign_1700x1062_NO_230821-E94ovxrCwU6QRbXEQmYHWg_96feb72c-0da8-4eaa-8ae6-6ec7b0069c36.mp4",
+              "hash": "a5bcdace2610265e2ce5a9d20000009d",
+              "size": 185168,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/light_sign_1700x1062_NO_2308212-vHu8xg4GeU6PQCN3ikehUQ_b7cdf49d-672c-411a-9c93-105f117f24b9.mp4",
+              "hash": "8db1fe6148360edb6973aa99c27a0a93",
+              "size": 139055,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/Pricerobot_in_store_NO-fhWwjzmZpUWDW6Bjz8eQxA_332b6cb9-b62f-4867-b889-c638b7a2b047.mp4",
+              "hash": "16072b81ce2d777ca7d45088e3d0571d",
+              "size": 3018495,
+              "volume": 0,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 1000,
+      "name": "DEFAULT TRACK",
+      "priority": 1,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2023-12-18T00:00:00.000",
+            "end": "2073-12-18T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Abstract_Power-5d4I2QkCGk6wKQP6dmfHCA_624332ab-06ea-446c-9b2b-c5b5d133441c.mp4",
+              "hash": "454ca3ce8a4b40cced99bd57a952f32d",
+              "size": 56987759,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                4
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/265_Power_placeholder_black_265-w41_AgxiskC_4ptmEV36rw_9b47b47e-260c-4505-be70-439a596cb7dc.mp4",
+              "hash": "469b3088c009e0333e1823c508add8a8",
+              "size": 233347,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Power_Default_Track_1_2-9FQgwgY7p0iQQ2hqLFzPBA_c12e1c71-45a6-41ea-9998-efed91c0fb26.mp4",
+              "hash": "97efb1f3eab059b6a35891bb6db1fb07",
+              "size": 93091996,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Power_Default_Track_1_1-vSL-pqDXUEWmKKHqKmvAVQ_c998c558-ecc4-4654-91c3-2a5c997c3728.mp4",
+              "hash": "95c9b701c43ca61c1e278919b453ad17",
+              "size": 63545826,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                4
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Snowboard_Demo-8ZrnsSB3UkuuyDekK3ynGQ_13f30e4c-3c47-4282-b840-20d6bd50e6dd.mp4",
+              "hash": "1ba8f1a4e4311d7da65341ee55c8d7e4",
+              "size": 65954942,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                4
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/407121_Basketball_Hoop_Neighborhood_Colorful_By_Fernando_Avruj_Artlist_4K_1--B4-EyLEqk2VbVHOEit43g_7fb8c3b3-79c8-4743-921f-cfa7198ce423.mp4",
+              "hash": "e7cdf183611c8da1f864cab5d44b8dc2",
+              "size": 12407706,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Sports_splitscreen_v3_1-jaE2rOJDYEmK_uFIufQhIA_da4c80ee-6900-4d74-aa8e-82f0df783f6e.mp4",
+              "hash": "35ceab6eb6a8ca48add37e3296fb48dd",
+              "size": 105896408,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                4
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/265_Power_placeholder_black_265-w41_AgxiskC_4ptmEV36rw_9b47b47e-260c-4505-be70-439a596cb7dc.mp4",
+              "hash": "469b3088c009e0333e1823c508add8a8",
+              "size": 233347,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/604170_Colored_Powder__Colorful_Holding_Gulal_By_VITALY_GARIEV_Artlist_4K_1-X2pufTIjRUCVQAQOjX5Qvw_33080ae4-6ee0-4780-8721-671134fc1ba5.mp4",
+              "hash": "96991aae1b3fd769a7b95fd5809b4e5c",
+              "size": 13139110,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/LM_Football_Demo_4K-anvWHGE4v0KwRfROWcgkng_a47b52c2-027f-4fee-9268-b8d544c635a9.mp4",
+              "hash": "9da1abb21ceca6ff0f7800fb77a5c705",
+              "size": 155885352,
+              "volume": 0,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": [
+        {
+          "name": "New Track",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": []
+        },
+        {
+          "name": "New Track",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": []
+        },
+        {
+          "name": "Samsung SUPPLIER",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": "samsung",
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": true
+          },
+          "playlists": [
+            {
+              "period": {
+                "start": "2024-10-30T00:00:00.000",
+                "end": "2074-10-30T00:00:00.000"
+              },
+              "items": [
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/SATV0825_Handraiser_NO_3840x2160_15sek_Power_1-e4XVDGRmfE2OmYbT3Qzg7w_9232c75e-6b30-4bb6-98fc-48fa9d727981.mp4",
+                  "hash": "19cd38daca806ad74dd4c6736ba70f60",
+                  "size": 6468168,
+                  "volume": 0,
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LongSUB",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": [
+            {
+              "period": {
+                "start": "2023-12-18T00:00:00.000",
+                "end": "2073-12-18T00:00:00.000"
+              },
+              "items": [
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/16x9___instore-TBIPKSrb0E6z8hc0aK979A_893d6b63-a417-4a2b-8ea3-e41cb7167fd1.mp4",
+                  "hash": "53b5ae55872ec9e5daf0d3ba8e4fef75",
+                  "size": 114590,
+                  "volume": 0,
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Frequent SUB",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": [
+            {
+              "period": {
+                "start": "2024-10-18T00:00:00.000",
+                "end": "2074-10-18T00:00:00.000"
+              },
+              "items": [
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/POWER_90s_16x9_WEB_2-OwffmsGinkOPG-xDOkaTNA_3e8d503e-8873-4fd6-86ae-325433327d31.mp4",
+                  "hash": "d28b80fda38903c0c0f5b68cdf824ca5",
+                  "size": 48093383,
+                  "volume": 0,
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Weekly",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": []
+        },
+        {
+          "name": "Weekly",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": [
+            {
+              "period": {
+                "start": "2025-07-14T00:00:00.000",
+                "end": "2025-08-10T23:59:59.000"
+              },
+              "items": [
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/Product_scroll_SoMe_2_products_Airpods_1920x1080__Norwegian-Rb6X0RlgQ0WCZHXKh2LrgQ_f8e5db1d-fbef-47c4-91d6-c04bea75fddb.mp4",
+                  "hash": "e665103820f23cae190c4c3e437c943c",
+                  "size": 1233051,
+                  "volume": 0,
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Promo",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": []
+        },
+        {
+          "name": "SUB",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": [
+            {
+              "period": {
+                "start": "2025-08-04T00:00:00.000",
+                "end": "2025-10-19T23:59:59.000"
+              },
+              "items": [
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/NO_3840x2160_INSTORE_SAFEZONE_V2-3KAHZ41Cy02XfjvzusUVZQ_47eca9df-6b6d-4d55-877d-3884ebd648f6.mp4",
+                  "hash": "c36ef4b09b9772cea08360e8c706863e",
+                  "size": 16853254,
+                  "volume": 0,
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SUB",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": [
+            {
+              "period": {
+                "start": "2025-04-10T00:00:00.000",
+                "end": "2075-04-10T00:00:00.000"
+              },
+              "items": [
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/148/transcoded-media/NO_POWER_Support_monthly_1920x1080_instore_Norwegian-VCk__1LJN0GYHsUFU280sA_0223da59-9f9a-4f8c-9c15-72b9dc0b089c.mp4",
+                  "hash": "bf19119a95a70f77d09dc0dc8c59bcff",
+                  "size": 169249,
+                  "volume": 0,
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3460,
+      "name": "Btn1",
+      "priority": 4,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/power_placeholder_black-gB9VXkIxd0mp9YH3gdS1Dg_ccf82c70-80b4-4e3e-b14a-979661fa76bc.mp4",
+              "hash": "b0928be7807aed02e5c79b9ea0d84698",
+              "size": 237873,
+              "volume": 0,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 3461,
+      "name": "Btn2",
+      "priority": 5,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Calman_Brigtness_NoLogo_SHORT-1fb1k-naJEKyd42XxnNoxw_5b8b1d38-e1e8-401a-815d-c6406603290f.mp4",
+              "hash": "6f7032bda649a3df3b4b8d7fa24fb7f8",
+              "size": 70715042,
+              "volume": 100,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 3462,
+      "name": "Btn3",
+      "priority": 6,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Calman_Contrast_NoLogo_SHORT-AWCFOSB01EK_10Po1YA8sg_d2994542-d873-4767-a7a6-a1f45d2aeb83.mp4",
+              "hash": "34473eb6343aed8e342c8eb686b26ec5",
+              "size": 31003807,
+              "volume": 100,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 3463,
+      "name": "Btn4",
+      "priority": 7,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2023-08-29T00:00:00.000",
+            "end": "2073-08-29T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Farve_skala_51_sec_265-hXUsPhvgMEGS7Fj-zvAocw_531a6ecd-d357-4111-96de-91f70c9ff724.mp4",
+              "hash": "c8437a0b195e7eeb767b75d98c6c4b99",
+              "size": 2305484,
+              "volume": 0,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 3464,
+      "name": "Btn5",
+      "priority": 8,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Calman_WhiteB_NoLogo_SHORT-v3xhA72Zl02F-9iPeqVspw_17f3945f-820a-44db-80e8-cb113747c20b.mp4",
+              "hash": "d67e6713e4dac129cf85e4a29303563d",
+              "size": 115993153,
+              "volume": 100,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 3465,
+      "name": "Btn6",
+      "priority": 9,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Calman_Sharpness_NoLogo_SHORT-8KKrLIXzwUaOWK_lDzZdbg_84458340-2ac5-4e38-b584-01ddc06667c6.mp4",
+              "hash": "91226d3a706ecd8f69eb13c372ee8ea6",
+              "size": 100894359,
+              "volume": 100,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 3466,
+      "name": "Btn7",
+      "priority": 10,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Power_Movement_Demo_Arrows_4K-OxgmmnYdZUmxbb1QPd96XQ_c6d1a656-a252-43ef-b457-b7403f9d1d9d.mp4",
+              "hash": "7461dcd222f2cddd0db334e0f215d6db",
+              "size": 6917882,
+              "volume": 0,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 3467,
+      "name": "Btn8",
+      "priority": 11,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/LM_Football_Demo_4K_60FPS-LUkFxnNiWUW2J5cu7s7eQg_fa651bb0-214a-4847-aefd-c18e82046097.mp4",
+              "hash": "b0c12aa3d3ff34e3dcb81adbc4e0227b",
+              "size": 147105080,
+              "volume": 0,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 5145,
+      "name": "Btn9",
+      "priority": 12,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/Music_Video_16x9-SfBMd1HX80CygmBgOkO_Wg_3b3e93cd-2d3a-4dbb-ba68-0db72553620a.mp4",
+              "hash": "a5373e66f02c1cce9a294001b361bc90",
+              "size": 68016531,
+              "volume": 100,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    },
+    {
+      "id": 5146,
+      "name": "Btn10",
+      "priority": 13,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2024-01-09T00:00:00.000",
+            "end": "2074-01-09T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/33/global-transcoded-media/wingsuit4k-e0NuB4GGBUO3tz0b4f1JFQ_d5a78a9e-0920-440b-954a-a1a7f0d40455.mp4",
+              "hash": "85e6e5006069928aff8bcc2d3ffebfdf",
+              "size": 543269173,
+              "volume": 100,
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "subtracks": []
+    }
+  ],
+  "trackTriggers": [
+    {
+      "trackId": 5146,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "10"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 5145,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "9"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 3467,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "8"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 3466,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "7"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 3465,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "6"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 3464,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "5"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 3463,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 3462,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "3"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 3461,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "trackId": 3460,
+      "triggers": [
+        {
+          "type": "button",
+          "arguments": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ]
+}

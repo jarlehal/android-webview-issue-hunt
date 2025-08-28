@@ -1,0 +1,73 @@
+﻿@using Polly
+@using Fluxor
+@using IssueHunt.Client.Interop
+@using IssueHunt.Client.Store
+@using IssueHunt.Client.Models
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@inject LaudVideo LaudVideo
+@inject IState<ZoneState> ZoneState
+@inject IDispatcher Dispatcher
+@inject IActionSubscriber ActionSubscriber
+
+@code {
+    private IEnumerable<PlaylistItem> _videos = Enumerable.Empty<PlaylistItem>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        ActionSubscriber.SubscribeToAction<TrackChangeRequest>(this, OnTrackChangeRequest);
+        ActionSubscriber.SubscribeToAction<TrackChangeDownloadCompleted>(this, OnTrackChangeLoadingCompleted);
+    }
+
+    private async void OnTrackChangeRequest(TrackChangeRequest action)
+    {
+        Dispatcher.Dispatch(new TrackChangeDownloading());
+        
+        await LaudVideo.Initialize();
+        
+        _videos = action.Track?
+            .AllValidItems(
+                ZoneState.Value.ZoneTrackFilter?.SiteId, 
+                ZoneState.Value.ZoneTrackFilter?.Brand, 
+                ZoneState.Value.ZoneTrackFilter?.Model, 
+                ZoneState.Value.ZoneTrackFilter?.Sku,
+                ZoneState.Value.PlayAt)
+            .Where(x => x is {IsVideo:true, CdnUrl:not null}) ?? [];
+
+        var playlistItems = _videos as PlaylistItem[] ?? _videos.ToArray();
+        await DownloadPlaylistItems(playlistItems);
+
+        Dispatcher.Dispatch(new TrackChangeDownloadCompleted(playlistItems));
+    }
+
+    private async Task DownloadPlaylistItems(IEnumerable<PlaylistItem> playlistItems)
+    {
+        foreach (var video in playlistItems)
+        {
+            if (video.CdnUrl != null) 
+                await Policy
+                    .Handle<Exception>()
+                    .WaitAndRetryAsync(10, _ => TimeSpan.FromSeconds(10), (exception, _) => { Console.WriteLine($"Failed to download.. {exception.Message}"); })
+                    .ExecuteAsync(async () =>
+                    {
+                        await LaudVideo.DownloadIfNotAlreadyInStore(video.CdnUrl);
+                    });
+        }
+    }
+    
+    private async void OnTrackChangeLoadingCompleted(TrackChangeDownloadCompleted action)
+    {
+        foreach (var video in _videos)
+        {
+            if (video.CdnUrl is null)
+            {
+                Console.WriteLine("Video is null");
+                continue;
+            }
+            var duration = await LaudVideo.GetIdbVideoDuration(video.CdnUrl);
+            video.Duration = duration;
+        }
+        
+        if (_videos.All(x => x.Duration.HasValue)) Dispatcher.Dispatch(new TrackChangeReadyRequest());
+    }
+}

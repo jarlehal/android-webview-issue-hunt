@@ -1,0 +1,138 @@
+@using IssueHunt.Client.Models
+@using Fluxor
+@using IssueHunt.Client.Interop
+@using IssueHunt.Client.Store
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@inject LaudVideo LaudVideo
+@inject IState<GlobalState> GlobalState
+@inject IState<ZoneState> ZoneState
+@inject IState<TrackState> TrackState
+@inject IDispatcher Dispatcher
+@inject IActionSubscriber ActionSubscriber
+
+@if (CurrentPlaylistVideos is not null && CurrentPlaylistVideos.Length > 0)
+{
+    @foreach (var item in CurrentPlaylistVideos?.Select((value, index) => new {index, value})!)
+    {
+        <video
+            id="@VideoElementId(item.index)"
+            class="@VideoClass(item.index)"
+            playsinline
+            preload="metadata"
+            @onended="async () => await NextVideo()">
+        </video>
+    }
+}
+
+@code {
+    private string VideoElementIdBase { get; set; } = "main-video-";
+    private string VideoElementId(int index) => $"{VideoElementIdBase}{index}";
+    
+    private string VideoClass(int index) 
+        => CurrentPlaylistIndex == index 
+            ? $"fullscreen {(GlobalState.Value.LiveVideoMode == LiveVideoModeEnum.FullScreenAspectRatio ? "contain" : "")} active" 
+            : $"fullscreen {(GlobalState.Value.LiveVideoMode == LiveVideoModeEnum.FullScreenAspectRatio ? "contain" : "")}";
+    
+    private Track? CurrentTrack { get; set; }
+    private PlaylistItem[]? CurrentPlaylistVideos { get; set; }
+    private int? CurrentPlaylistIndex { get; set; }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        
+        ActionSubscriber.SubscribeToAction<TrackChangeReadyResponse>(this, OnTrackChangeReadyResponse);
+        ActionSubscriber.SubscribeToAction<TrackResumeRequest>(this, OnTrackResumeRequest);
+    }
+
+    private async void OnTrackResumeRequest(TrackResumeRequest action)
+    {
+        await NextVideo();
+    }
+
+    private async void OnTrackChangeReadyResponse(TrackChangeReadyResponse action)
+    {
+        CurrentTrack = TrackState.Value.CurrentTrack;
+        
+        CurrentPlaylistVideos = CurrentTrack?.AllValidItems(
+            ZoneState.Value.ZoneTrackFilter?.SiteId, 
+            ZoneState.Value.ZoneTrackFilter?.Brand,
+            ZoneState.Value.ZoneTrackFilter?.Model,
+            ZoneState.Value.ZoneTrackFilter?.Sku,
+            ZoneState.Value.PlayAt);
+        
+        await StartPlayback();
+    }
+    
+    private async Task StartPlayback()
+    {
+        if (CurrentPlaylistVideos is null || CurrentPlaylistVideos.Length == 0)
+        {
+            return;
+        }
+        
+        await InvokeAsync(StateHasChanged);
+
+        foreach (var item in CurrentPlaylistVideos?.Select((value, index) => new {index, value})!)
+        {
+            if (item.value.CdnUrl != null) 
+                await LaudVideo.SetVideoSource(VideoElementId(item.index), item.value.CdnUrl, true);
+        }
+        
+        var syncPoint = FindSyncPoint(CurrentPlaylistVideos, 0.0);
+        
+        await Play(VideoElementId(syncPoint.PlaylistIndex), syncPoint.SeekSeconds);
+        
+        Dispatcher.Dispatch(new PlaylistItemChange(CurrentPlaylistVideos[syncPoint.PlaylistIndex], syncPoint.SeekSeconds, syncPoint.PlaylistIndex));
+        
+        CurrentPlaylistIndex = syncPoint.PlaylistIndex;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task NextVideo()
+    {
+        if (CurrentPlaylistVideos is null || CurrentPlaylistVideos.Length == 0)         
+        {
+            return;
+        }
+
+        if (CurrentPlaylistVideos.All(x => x.Duration.HasValue))
+        {
+            var syncPoint = FindSyncPoint(CurrentPlaylistVideos, 0.0);
+            Dispatcher.Dispatch(new PlaylistItemChange(CurrentPlaylistVideos[syncPoint.PlaylistIndex], syncPoint.SeekSeconds, syncPoint.PlaylistIndex));
+            await Play(VideoElementId(syncPoint.PlaylistIndex), syncPoint.SeekSeconds);
+            CurrentPlaylistIndex = syncPoint.PlaylistIndex;        
+        }
+        
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task Play(string videoElementId, double seek = 0)
+    {
+        await LaudVideo.PlayVideo(videoElementId, seek);
+    }
+
+    private record SyncPoint(int PlaylistIndex, double SeekSeconds);
+
+    private SyncPoint FindSyncPoint(PlaylistItem[] playlistItems, double localClockSkew)
+    {
+        if (playlistItems.Any(x => !x.Duration.HasValue)) return new SyncPoint(0, 0);
+        
+        var totalPlaylistSeconds = playlistItems.Sum(x => x.Duration!.Value);
+        var secondsSinceMidnightUtc = DateTime.UtcNow.TimeOfDay;
+        var seekSeconds = (secondsSinceMidnightUtc.TotalSeconds + localClockSkew ) % totalPlaylistSeconds;
+
+        var index = 0;
+        var previousDurationSum = 0.0;
+        var durationSum = playlistItems[0].Duration!.Value;
+        while (seekSeconds > durationSum)
+        {
+            index++;
+            previousDurationSum = durationSum;
+            durationSum += playlistItems[index].Duration!.Value;
+        }
+          
+        return new SyncPoint(index, seekSeconds - previousDurationSum);
+    }
+    
+}
