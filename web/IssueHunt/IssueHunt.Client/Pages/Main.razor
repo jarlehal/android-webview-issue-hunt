@@ -12,10 +12,20 @@
 <div class="container">
     @if (TrackState.Value.LoadingState != TrackLoadingState.Ready)
     {
-        <div class="row">
+        <div class="row align-content-center" style="height: 50vh;">
             <div class="col-12"> 
                 <div class="text-center">
-                    <div style="font-size: 3rem;">Downloading...</div>
+                    <div style="font-size: 4rem;">Downloading...</div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row align-content-center" style="height: 50vh;">
+            <div class="col-12"> 
+                <div class="text-center">
+                    <div class="btn btn-lg btn-warning" style="font-size: 4rem; opacity: 0.8">Try me</div>
                 </div>
             </div>
         </div>
@@ -25,7 +35,7 @@
 </div>
 @code
 {
-    
+
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
