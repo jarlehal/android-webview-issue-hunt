@@ -1,0 +1,225 @@
+{
+  "tracks": [
+    {
+      "id": 2710,
+      "name": "BASE",
+      "priority": 0,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [],
+      "subtracks": []
+    },
+    {
+      "id": 3543,
+      "name": "MAIN",
+      "priority": 1,
+      "playCondition": {
+        "interval": null,
+        "siteIds": [],
+        "hours": [],
+        "days": [],
+        "brand": null,
+        "models": [],
+        "skus": [],
+        "onlyInSupplierLocation": false,
+        "onHigherPri": "stop"
+      },
+      "playlists": [
+        {
+          "period": {
+            "start": "2025-08-28T00:00:00.000",
+            "end": "2075-08-28T00:00:00.000"
+          },
+          "items": [
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_3-8qAoaT8Lk0iCzYF2rE0C2A_9646c88d-758a-4096-8e81-7a99db0b3a92.mp4",
+              "hash": "cb0f110a882bce275eb911550130602a",
+              "size": 21991942,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_6-OpV3QcIIbU-2u49Q8qHkFg_b678405c-96da-4963-a9bf-c9ef9b3798e6.mp4",
+              "hash": "4f7aac01aab673c724add2df4f3ede4f",
+              "size": 2381305,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_1-HvVmoZWXl06F8WRXwE0JRQ_b54b2159-dc21-482b-bd9f-b9319df59279.mp4",
+              "hash": "3205bed164bece20b8befe5df7e7135e",
+              "size": 11914798,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_5-UbTk03J-TUqEE0gpPPmm_g_d337d282-a422-421e-9028-c40a7b883b4a.mp4",
+              "hash": "b1c81c8e29470cfe12fe1a5a2f9e0bd3",
+              "size": 1395502,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_2-Ua11Nv0vKEW3dm5G1q0Auw_c9584046-014e-49cd-8807-b178f252612d.mp4",
+              "hash": "4d7824dcad9e9117cabcc81919cae78c",
+              "size": 12780157,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_4-i6JBPCka8USFFYadb71abA_ac7e761d-9957-4eed-b3de-8f7ef1f5ec44.mp4",
+              "hash": "a2f9240814bf7ea9c66c5bd2667f5c7a",
+              "size": 7809429,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_10-0-Ewp3O6BkeyCpceASgHQg_a7f56134-6b51-45ea-a595-aba5a5134d14.mp4",
+              "hash": "e92b7c8c6754e835e312686652853939",
+              "size": 22519510,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0
+              ]
+            },
+            {
+              "type": "video",
+              "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issure_video_11-S0q5611PDECiMq2BOVlPkw_87b125c7-e200-4754-be6e-cecf456f1cb6.mp4",
+              "hash": "0c60dc6acd964de07466857db771d1cf",
+              "size": 22252184,
+              "volume": 0,
+              "tags": []
+            },
+            {
+              "type": "subtrack",
+              "subtracks": [
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "subtracks": [
+        {
+          "name": "Sub",
+          "playCondition": {
+            "siteIds": [],
+            "hours": [],
+            "days": [],
+            "brand": null,
+            "models": [],
+            "skus": [],
+            "onlyInSupplierLocation": false
+          },
+          "playlists": [
+            {
+              "period": {
+                "start": "2025-08-28T00:00:00.000",
+                "end": "2075-08-28T00:00:00.000"
+              },
+              "items": [
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_7-MUCH4t1ko0WXYU6quM36Sw_80b28295-25d0-49c1-ba01-563406b594b2.mp4",
+                  "hash": "06479441edd0598315da86ae3c2cfd8d",
+                  "size": 3688375,
+                  "volume": 0,
+                  "tags": []
+                },
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_8-Unt93VZim0qsLi55ChMHWA_b957aeeb-0d50-46f6-83a0-d9959c9b401f.mp4",
+                  "hash": "025e115b4ad2074707b41db455bc8124",
+                  "size": 17995741,
+                  "volume": 0,
+                  "tags": []
+                },
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_7-MUCH4t1ko0WXYU6quM36Sw_80b28295-25d0-49c1-ba01-563406b594b2.mp4",
+                  "hash": "06479441edd0598315da86ae3c2cfd8d",
+                  "size": 3688375,
+                  "volume": 0,
+                  "tags": []
+                },
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issue_video_9-tiCba47OzEOAKBdNtAY6EA_8e7a2094-275c-4b1c-936f-6a744029c4d1.mp4",
+                  "hash": "3af14e2a93b83171ccab2810330902f8",
+                  "size": 6661944,
+                  "volume": 0,
+                  "tags": []
+                },
+                {
+                  "type": "video",
+                  "url": "https://laudmedia-content.s3.eu-central-1.amazonaws.com/1/1/transcoded-media/issure_video_12-qMe9DMSEMk-0bTACarSHxg_4df567d0-8233-4554-b59d-2e74f871a03b.mp4",
+                  "hash": "fec0546c22329eeefd64e7a16a37f8ae",
+                  "size": 7824594,
+                  "volume": 0,
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "trackTriggers": []
+}

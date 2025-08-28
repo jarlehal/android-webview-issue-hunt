@@ -10,8 +10,16 @@
 
 <PageTitle>IssueHunt</PageTitle>
 <div class="container">
-    <h1>Zone State @ZoneState.Value.LoadingState</h1>
-    <h1>Track State @TrackState.Value.LoadingState</h1>
+    @if (TrackState.Value.LoadingState != TrackLoadingState.Ready)
+    {
+        <div class="row">
+            <div class="col-12"> 
+                <div class="text-center">
+                    <div style="font-size: 3rem;">Downloading...</div>
+                </div>
+            </div>
+        </div>
+    }
     <TrackManager></TrackManager>
     <LiveFullscreenVideo></LiveFullscreenVideo>
 </div>
@@ -28,7 +36,7 @@
         await base.OnAfterRenderAsync(firstRender);
         if (firstRender)
         {
-            Dispatcher.Dispatch(new LoadZoneAction(415, true));
+            Dispatcher.Dispatch(new LoadZoneAction(637, true));
         }
     }
 }
