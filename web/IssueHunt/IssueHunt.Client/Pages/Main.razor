@@ -7,6 +7,7 @@
 @inject IState<ZoneState> ZoneState
 @inject IState<TrackState> TrackState
 @inject IDispatcher Dispatcher
+@inject IJSRuntime JsRuntime
 
 <PageTitle>IssueHunt</PageTitle>
 <div class="container">
@@ -25,7 +26,7 @@
         <div class="row align-content-center" style="height: 50vh;">
             <div class="col-12"> 
                 <div class="text-center">
-                    <div class="btn btn-lg btn-warning" style="font-size: 4rem; opacity: 0.8">Try me</div>
+                    <div @onclick="Callback" class="btn btn-lg btn-warning" style="font-size: 4rem; opacity: 0.8">Try me</div>
                 </div>
             </div>
         </div>
@@ -48,5 +49,10 @@
         {
             Dispatcher.Dispatch(new LoadZoneAction(637, true));
         }
+    }
+
+    private async Task Callback()
+    {
+        await JsRuntime.InvokeVoidAsync("laudMediaAndroid.closeApp");
     }
 }

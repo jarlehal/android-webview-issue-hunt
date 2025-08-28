@@ -67,7 +67,7 @@ public class LoadZoneEffect(IZoneService zoneService) : Effect<LoadZoneAction>
     }
 }
 
-public class LoadZoneSuccessEffect(IState<ZoneState> zoneState, IZoneService zoneService) : Effect<LoadZoneSuccessAction>
+public class LoadZoneSuccessEffect(IState<ZoneState> zoneState) : Effect<LoadZoneSuccessAction>
 {
     public override Task HandleAsync(LoadZoneSuccessAction action, IDispatcher dispatcher)
     {
