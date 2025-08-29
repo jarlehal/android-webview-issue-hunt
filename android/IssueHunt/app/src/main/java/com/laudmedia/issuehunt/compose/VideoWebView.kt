@@ -21,7 +21,7 @@ import com.laudmedia.issuehunt.ui.theme.IssueHuntTheme
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun VideoWebView() {
-    val videoUrl = "https://laud-media.com"
+    val videoUrl = "https://staging-awv-issue.laud-media.com"
 
     val errorPage = """
         <?xml version="1.0" encoding="UTF-8" ?>
@@ -101,17 +101,6 @@ fun VideoWebView() {
         },
         onRelease = {
             it.loadUrl("about:blank")
-            it.stopLoading()
-            it.clearHistory()
-            it.removeAllViews()
-
-            /* temporary fix for our solutions
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                it.webViewRenderProcess?.terminate()
-            }
-            */
-
-            it.destroy()
             Log.d("VideoWebView","OnRelease")
         }
     )

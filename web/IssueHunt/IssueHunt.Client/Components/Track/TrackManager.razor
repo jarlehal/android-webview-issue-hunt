@@ -64,8 +64,15 @@
                 Console.WriteLine("Video is null");
                 continue;
             }
-            var duration = await LaudVideo.GetIdbVideoDuration(video.CdnUrl);
-            video.Duration = duration;
+            await Policy
+                .Handle<Exception>()
+                .WaitAndRetryAsync(10, _ => TimeSpan.FromSeconds(10), (exception, _) => { Console.WriteLine($"Failed to download.. {exception.Message}"); })
+                .ExecuteAsync(async () =>
+                {
+                    var duration = await LaudVideo.GetIdbVideoDuration(video.CdnUrl);
+                    video.Duration = duration;
+                });
+            
         }
         
         if (_videos.All(x => x.Duration.HasValue)) Dispatcher.Dispatch(new TrackChangeReadyRequest());
