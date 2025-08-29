@@ -64,15 +64,18 @@
                 Console.WriteLine("Video is null");
                 continue;
             }
-            await Policy
-                .Handle<Exception>()
-                .WaitAndRetryAsync(10, _ => TimeSpan.FromSeconds(10), (exception, _) => { Console.WriteLine($"Failed to download.. {exception.Message}"); })
-                .ExecuteAsync(async () =>
-                {
-                    var duration = await LaudVideo.GetIdbVideoDuration(video.CdnUrl);
-                    video.Duration = duration;
-                });
-            
+
+            if (video.Duration is null)
+            {
+                await Policy
+                    .Handle<Exception>()
+                    .WaitAndRetryAsync(10, _ => TimeSpan.FromSeconds(10), (exception, _) => { Console.WriteLine($"Failed to get duration.. {exception.Message}"); })
+                    .ExecuteAsync(async () =>
+                    {
+                        var duration = await LaudVideo.GetIdbVideoDuration(video.CdnUrl);
+                        video.Duration = duration;
+                    });
+            }
         }
         
         if (_videos.All(x => x.Duration.HasValue)) Dispatcher.Dispatch(new TrackChangeReadyRequest());
